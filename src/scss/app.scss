@@ -1,0 +1,15 @@
+@import "./normalize.scss";
+@import "./fonts.scss";
+
+.wrapper {
+  width: calc(100vw - 240px);
+  height: 100%;
+  background-color: #fff;
+  margin: 40px auto;
+  max-width: 1440px;
+
+  @media (max-width: 645px) {
+    width: calc(100vw - 30px);
+    margin-top: 15px;
+  }
+}
