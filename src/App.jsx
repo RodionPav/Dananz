@@ -1,10 +1,14 @@
-import "./App.css";
 import Home from "./page/Home/Home";
+import "./scss/app.scss";
 
 function App() {
   return (
     <>
-      <Home />
+      <div className="wrapper">
+        <div className="content">
+          <Home />
+        </div>
+      </div>
     </>
   );
 }
