@@ -64,7 +64,7 @@ function Home() {
       </div>
       <div className="about">
         <div className="top-content  about__top">
-          <h3 className="top-content-text about__top-text">ABOUT</h3>
+          <h3 className="top-content-topic about__top-topic">ABOUT</h3>
           <h2 className="top-content-title  about__top-title">
             “We're one of the best furniture agency. Prioritizing customers and
             making purchases easy are the hallmarks of our agency.”
@@ -102,61 +102,166 @@ function Home() {
       </div>
       <div className="service">
         <div className="top-content">
-          <h3 className="top-content-text">SERVICE</h3>
-          <h2 className="top-content-title">
+          <h3 className="top-content-topic service__top-topic">SERVICE</h3>
+          <h2 className="top-content-title service__top-title">
             attractive furniture with the best quality.
           </h2>
-          <p className="service__top-text">
+          <p className="top-content-text service__top-text">
             Customize your interior design into a dream place with the best
             designers and quality furniture. We try our best to fulfill your
             expectations.
           </p>
         </div>
-        <img
-          src="../../../public/img/service-img.png"
-          alt=""
-          className="service__img"
-        />
-        <nav className="service__menu">
-          <ul className="service__links__list">
-            <li className="service__links__list__item">
-              <p className="service__links__list__item-number">01</p>
-              <a href="#" className="link service__link">
-                <p className="service__link-text">Interior Design</p>
-              </a>
-              <img
-                src="../../../public/img/arrow-right.png"
-                alt="arrow right image"
-                className="service__links__list-img"
-              />
-            </li>
-            <li className="service__links__list__item">
-              <p className="service__links__list__item-number">02</p>
-              <a href="#" className="link service__link">
-                <p className="service__link-text"> Consultant</p>
-              </a>
-              <img
-                src="../../../public/img/arrow-right.png"
-                alt="arrow right image"
-                className="service__links__list-img"
-              />
-            </li>
-            <li className="service__links__list__item">
-              <p className="service__links__list__item-number"> 03</p>
-              <a href="#" className="link service__link">
-                <p className="service__link-text">Construction Consultant</p>
-              </a>
-              <img
-                src="../../../public/img/arrow-right.png"
-                alt="arrow right image"
-                className="service__links__list-img"
-              />
-            </li>
-          </ul>
-        </nav>
+        <div className="service__bottom service__img">
+          <nav className="menu  service__menu ">
+            <ul className="links__list service__links__list">
+              <li className="links__list__item service__links__list__item">
+                <p className="links__list__item-number service__links__list__item-number">
+                  01
+                </p>
+                <a href="#" className="link service__link">
+                  Interior Design
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img service__links__list-img"
+                />
+              </li>
+              <li className="links__list__item service__links__list__item">
+                <p className="links__list__item-number service__links__list__item-number">
+                  02
+                </p>
+                <a href="#" className="link service__link">
+                  Consultant
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img service__links__list-img"
+                />
+              </li>
+              <li className="links__list__item service__links__list__item">
+                <p className="links__list__item-number service__links__list__item-number">
+                  03
+                </p>
+                <a href="#" className="link service__link">
+                  Construction Consultant
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img service__links__list-img"
+                />
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-      <div className="product"></div>
-      <div className="material"></div>
+      <div className="product">
+        <div className="top-content  product__top">
+          <h3 className="top-content-topic product__top-topic">PRODUCT</h3>
+          <h2 className="top-content-title  product__top-title">
+            Choose your product themes.
+          </h2>
+          <p className="top-content-text product__top-text">
+            Find the theme you want. If our choice of theme is not what you
+            want, you can customize it as you want.
+          </p>
+        </div>
+        <div className="product__bottom">
+          <nav className="menu product__menu ">
+            <ul className="links__list product__links__list">
+              <li className="links__list__item product__links__list__item">
+                <p className="links__list__item-number product__links__list__item-number">
+                  01
+                </p>
+                <a href="#" className="link product__link">
+                  Vintage
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img product__links__list-img"
+                />
+              </li>
+              <p className="product__links__list-text">
+                the use of simple and limited elements to get the best effect or
+                impression.
+              </p>
+              <li className="links__list__item product__links__list__item">
+                <p className="links__list__item-number product__links__list__item-number">
+                  02
+                </p>
+                <a href="#" className="link product__link">
+                  Minimalist
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img product__links__list-img"
+                />
+              </li>
+              <p className="product__links__list-text">
+                the use of simple and limited elements to get the best effect or
+                impression.
+              </p>
+              <li className="links__list__item product__links__list__item">
+                <p className="links__list__item-number product__links__list__item-number">
+                  03
+                </p>
+                <a href="#" className="link product__link">
+                  Modern
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img product__links__list-img"
+                />
+              </li>
+              <p className="product__links__list-text">
+                the use of simple and limited elements to get the best effect or
+                impression.
+              </p>
+              <li className="links__list__item product__links__list__item">
+                <p className="links__list__item-number product__links__list__item-number">
+                  04
+                </p>
+                <a href="#" className="link product__link">
+                  transitional
+                </a>
+                <img
+                  src="../../../public/img/arrow-right.png"
+                  alt="arrow right image"
+                  className="link links__list-img product__links__list-img"
+                />
+              </li>
+              <p className="product__links__list-text">
+                the use of simple and limited elements to get the best effect or
+                impression.
+              </p>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div className="material">
+        <div className="top-content  material__top">
+          <h3 className="top-content-topic material__top-topic">MATERIAL</h3>
+          <h2 className="top-content-title  material__top-title">
+            choice of materials for quality furniture.
+          </h2>
+          <p className="top-content-text material__top-text">
+            You can custom the material as desired. And our furniture uses the
+            best materials and selected quality materials.
+          </p>
+          <button className="button material__top-button">See Materials</button>
+        </div>
+        <div className="material__bottom">
+          <div className="material__bottom-left"></div>
+          <div className="material__bottom-right-top"></div>
+          <div className="material__bottom-right-bottom"></div>
+        </div>
+      </div>
       <footer className="footer"></footer>
     </>
   );
