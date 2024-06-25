@@ -11,7 +11,7 @@
   margin: 0;
   list-style: none;
   outline: none;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   box-sizing: border-box;
 }
 
@@ -47,6 +47,16 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  --color-blue: #2c3878;
+  --color-white: #fff;
+  --color-gray: #9c9c9c;
+  --secondary-text: {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+  }
 }
 
 @mixin noselect {
