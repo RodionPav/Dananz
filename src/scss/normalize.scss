@@ -44,12 +44,23 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   --color-blue: #2c3878;
   --color-white: #fff;
   --color-gray: #9c9c9c;
+  --color-black: #333333;
   --secondary-text: {
     font-family: Poppins;
     font-size: 18px;
