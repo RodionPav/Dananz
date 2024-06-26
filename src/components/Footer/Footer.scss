@@ -1,0 +1,147 @@
+.footer {
+  margin-top: 100px;
+  height: 600px;
+  &__top {
+    background-color: var(--color-blue);
+    padding: 40px 120px;
+    display: grid;
+    grid-template-areas:
+      "A B"
+      "A C";
+    &-title {
+      width: 610px;
+      grid-area: A;
+      color: var(--color-white);
+    }
+
+    &-text {
+      width: 432px;
+      justify-self: flex-end;
+      align-self: flex-end;
+      grid-area: B;
+    }
+
+    &-button {
+      margin-left: 80px;
+      align-self: flex-end;
+      grid-area: C;
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
+  &__bottom {
+    margin: 80px 120px;
+    display: grid;
+    grid-template-areas:
+      "A B"
+      "C B"
+      "C D";
+
+    &-logo {
+      height: 54px;
+      grid-area: A;
+    }
+
+    &-title {
+      padding-top: 10px;
+      grid-area: C;
+      width: 450px;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 61.2px;
+      text-align: left;
+    }
+
+    .search-form__textfield:active {
+      outline: 1px solid #ffffff;
+    }
+
+    .search-form__textfield:focus {
+      outline: 1px solid #ffffff;
+      outline-offset: 1px;
+    }
+
+    .search-form__textfield::content {
+      background: #1b1919;
+    }
+
+    &__fieldset {
+      margin-top: 33px;
+      justify-self: end;
+      grid-area: B;
+      border: none;
+      &-title {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+        text-align: left;
+      }
+
+      &-title::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 20px;
+        background-color: var(--color-black);
+        margin-right: 5px;
+      }
+
+      &-input {
+        width: 440px;
+        margin-top: 24px;
+        border: none;
+        border-bottom: 1px solid var(--color-black);
+        padding-left: 0px;
+        padding-bottom: 18px;
+        color: var(--color-black);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21.6px;
+        text-align: left;
+        background-color: var(--color-white);
+        user-select: none;
+      }
+
+      &-input::placeholder {
+        color: #d9d9d9;
+      }
+    }
+
+    &__social {
+      grid-area: D;
+      align-self: flex-end;
+      justify-self: end;
+      margin-top: 40px;
+      width: 203px;
+      &-text {
+        padding-bottom: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25.6px;
+        text-align: left;
+      }
+      &__list {
+        display: flex;
+        gap: 25px;
+        &__item {
+          &-link {
+            height: 32px;
+            width: 32px;
+            display: flex;
+            background-color: #d9d9d9;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+          }
+          &-icon {
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}

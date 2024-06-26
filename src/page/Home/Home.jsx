@@ -262,7 +262,6 @@ function Home() {
           <div className="material__bottom-right-bottom"></div>
         </div>
       </div>
-      <footer className="footer"></footer>
     </>
   );
 }

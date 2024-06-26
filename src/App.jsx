@@ -1,5 +1,6 @@
 import Home from "./page/Home/Home";
 import "./scss/app.scss";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           <Home />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
