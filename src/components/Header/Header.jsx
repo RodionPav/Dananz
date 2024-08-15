@@ -1,9 +1,10 @@
 import "./Header.scss";
-import Button from "../generic/Button/Button"
+import Button from "../generic/Button/Button";
 
 function Header() {
   return (
     <header className="header">
+      <div className="header__wrapper">
         <a className="logo"> Dananz</a>
         <nav className="header__menu">
           <ul className="header__links__list">
@@ -28,12 +29,13 @@ function Header() {
               </a>
             </li>
             <li className="header__links__list-item">
-              <Button/>
+              <Button />
             </li>
           </ul>
         </nav>
-      </header>
-  )
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

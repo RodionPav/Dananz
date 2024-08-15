@@ -1,19 +1,30 @@
 @import "../../assets/scss/mixin.scss";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__menu {
+  width: 100%;
+  z-index: 10;
+  transition: grid-template-rows 0.2s;
+  background: #f4f4f4;
+  position: sticky;
+  top: 0;
+  &__wrapper {
     display: flex;
     align-items: center;
+
+    width: calc(100vw - 240px);
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    margin-left: auto;
   }
 
   &__links__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 74px;
+    justify-content: space-around;
+    width: clamp(200px, 50vi, 1000px);
   }
 }
