@@ -1,0 +1,25 @@
+.button {
+  text-decoration: none;
+  text-align: center;
+  min-width: 142px;
+  min-height: 49px;
+  padding: 14px 32px;
+  color: #ffff;
+  font-weight: 500;
+  font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+  line-height: 21px;
+  background: #2c3878;
+
+  &:hover {
+    text-shadow: 1px 1px 2px rgb(198, 189, 190);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
+
+  &:active {
+    text-shadow: 1px 1px 2px rgb(146, 140, 141);
+  }
+}

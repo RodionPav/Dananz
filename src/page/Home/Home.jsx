@@ -14,7 +14,7 @@ function Home() {
           </p>
         </div>
         <img
-          src="../../../public/img/intro-img.png"
+          src="/img/intro-img.png"
           alt="bright kitchen image"
           className="intro__img"
         />
@@ -42,7 +42,7 @@ function Home() {
         </div>
         <div className="about__bottom">
           <img
-            src="../../../public/img/about-img.png"
+            src="/img/about-img.png"
             alt="bright kitchen with wooden table image"
             className="about__bottom__img"
           />
@@ -57,7 +57,7 @@ function Home() {
           </div>
           <div className="about__bottom__card">
             <img
-              src="../../../public/img/CEO-picture.png"
+              src="/img/CEO-picture.png"
               alt="picture of CEO"
               className="about__bottom__card-img"
             />
@@ -93,7 +93,7 @@ function Home() {
                   Interior Design
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img service__links__list-img"
                 />
@@ -106,7 +106,7 @@ function Home() {
                   Consultant
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img service__links__list-img"
                 />
@@ -119,7 +119,7 @@ function Home() {
                   Construction Consultant
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img service__links__list-img"
                 />
@@ -150,7 +150,7 @@ function Home() {
                   Vintage
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img product__links__list-img"
                 />
@@ -167,7 +167,7 @@ function Home() {
                   Minimalist
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img product__links__list-img"
                 />
@@ -184,7 +184,7 @@ function Home() {
                   Modern
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img product__links__list-img"
                 />
@@ -201,7 +201,7 @@ function Home() {
                   transitional
                 </a>
                 <img
-                  src="../../../public/img/arrow-right.png"
+                  src="/img/arrow-right.png"
                   alt="arrow right image"
                   className="link links__list-img product__links__list-img"
                 />
@@ -224,7 +224,9 @@ function Home() {
             You can custom the material as desired. And our furniture uses the
             best materials and selected quality materials.
           </p>
-          <button className="button material__top-button">See Materials</button>
+          <button className="material__top-button button ">
+            See Materials
+          </button>
         </div>
         <div className="material__bottom">
           <div className="material__bottom-left"></div>
