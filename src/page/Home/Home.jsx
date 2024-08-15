@@ -13,24 +13,27 @@ function Home() {
             2022
           </p>
         </div>
-        <img
-          src="/img/intro-img.png"
-          alt="bright kitchen image"
-          className="intro__img"
-        />
-        <ul className="intro__cards">
-          <li className="intro__cards-item">
-            <span className="intro__cards-item-span">350+</span> Project
-            Completed
-          </li>
-          <li className="intro__cards-item">
-            <span className="intro__cards-item-span">23+</span>
-            Professional Teams
-          </li>
-          <li className="intro__cards-item">
-            <span className="intro__cards-item-span">15+</span>Years Experience
-          </li>
-        </ul>
+        <div className="intro__img wrapper-img">
+          <img
+            src="/img/intro-img.png"
+            alt="bright kitchen image"
+            className="img"
+          />
+          <ul className="intro__cards">
+            <li className="intro__cards__item">
+              <h3 className="intro__cards__item-header">350+</h3>
+              <p className="intro__cards__item-text">Project Completed</p>
+            </li>
+            <li className="intro__cards__item">
+              <h3 className="intro__cards__item-header">23+</h3>
+              <p className="intro__cards__item-text">Professional Teams</p>
+            </li>
+            <li className="intro__cards__item">
+              <h3 className="intro__cards__item-header">15+</h3>
+              <p className="intro__cards__item-text">Years Experience</p>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="about">
         <div className="top-content  about__top">

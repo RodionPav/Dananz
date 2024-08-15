@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
   margin-top: 100px;
   height: 600px;
   &__top {
@@ -9,21 +10,18 @@
       "A B"
       "A C";
     &-title {
-      width: 610px;
+      width: 90%;
+      min-width: 250px;
       grid-area: A;
       color: var(--color-white);
     }
 
     &-text {
-      width: 432px;
-      justify-self: flex-end;
       align-self: flex-end;
       grid-area: B;
     }
 
     &-button {
-      margin-left: 80px;
-      align-self: flex-end;
       grid-area: C;
       background-color: var(--color-white);
       color: var(--color-black);
