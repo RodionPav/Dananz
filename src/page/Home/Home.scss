@@ -1,32 +1,10 @@
-@import "../../scss/fonts.scss";
+@import "../../assets/fonts/fonts.scss";
 
 .logo {
   font-weight: 700;
-  font-size: 31.93px;
+  font-size: clamp(1.375rem, 1.1549rem + 0.939vw, 2rem);
   line-height: 54.28px;
   text-align: left;
-  &:hover {
-    text-shadow: 1px 1px 2px rgb(198, 189, 190);
-    cursor: pointer;
-  }
-
-  &:active {
-    text-shadow: 1px 1px 2px rgb(146, 140, 141);
-  }
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 142px;
-  height: 49px;
-  color: #ffff;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: left;
-  background: #2c3878;
   &:hover {
     text-shadow: 1px 1px 2px rgb(198, 189, 190);
     cursor: pointer;
@@ -100,7 +78,6 @@
   grid-template-areas:
     "A B"
     "C C";
-
   justify-content: space-between;
   margin-top: 98px;
 
@@ -108,7 +85,7 @@
     grid-area: A;
     max-width: 681px;
     font-weight: 700;
-    font-size: 72px;
+    font-size: clamp(3rem, 2.4718rem + 2.2535vw, 4.5rem);
     line-height: 100.8px;
     text-align: left;
   }
@@ -117,6 +94,7 @@
     grid-area: B;
     padding-top: 13px;
     font-weight: 500;
+    font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
     font-size: 18px;
     line-height: 27px;
     writing-mode: vertical-lr;
@@ -248,7 +226,7 @@
   }
 
   &__img {
-    background-image: url("../../../public/img/service-img.png");
+    background-image: url(img/service-img.png);
     background-repeat: no-repeat;
     background-size: 1076px 524.55px;
     background-position-y: bottom;
@@ -316,18 +294,18 @@
 
   &__links__list {
     &-text {
-      padding: 24px 0 43px 120px;
       width: 570px;
-      font-size: 18px;
+      padding: 24px 0 43px 120px;
       font-weight: 400;
+      font-size: 18px;
       line-height: 28.8px;
       text-align: left;
     }
 
     &__item {
       &-number {
-        font-size: 32px;
         font-weight: 600;
+        font-size: 32px;
         line-height: 44.8px;
         text-align: left;
       }
@@ -335,11 +313,11 @@
   }
 
   &__link {
-    font-size: 32px;
+    padding-left: 87px;
     font-weight: 600;
+    font-size: 32px;
     line-height: 44.8px;
     text-align: left;
-    padding-left: 87px;
   }
 }
 
@@ -359,14 +337,14 @@
       width: 330px;
     }
     &-text {
-      margin-top: 10px;
       width: 500px;
+      margin-top: 10px;
     }
     &-button {
-      margin-top: 23px;
       width: 160px;
-      background: var(--color-white);
+      margin-top: 23px;
       color: var(--color-black);
+      background: var(--color-white);
     }
   }
 
@@ -375,32 +353,32 @@
     grid-template-areas:
       "A B"
       "A C";
-    min-height: 490px;
     min-width: 622px;
+    min-height: 490px;
 
     &-left {
-      background-position: bottom;
-      background-repeat: no-repeat;
-      width: 340px;
       grid-area: A;
-      background-image: url(../../../public/img/material-1.png);
+      width: 340px;
+      background-image: url(img/material-1.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
     }
 
     &-right-top {
-      background-position: right;
-      background-repeat: no-repeat;
-      height: 225px;
       grid-area: B;
-      background-image: url(../../../public/img/material-2.png);
+      height: 225px;
+      background-image: url(img/material-2.png);
+      background-repeat: no-repeat;
+      background-position: right;
     }
 
     &-right-bottom {
-      background-position: center;
+      grid-area: C;
       width: 280px;
       height: 265px;
+      background-image: url(img/material-3.png);
       background-repeat: no-repeat;
-      grid-area: C;
-      background-image: url(../../../public/img/material-3.png);
+      background-position: center;
     }
   }
 }

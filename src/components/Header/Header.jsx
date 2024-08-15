@@ -1,4 +1,5 @@
 import "./Header.scss";
+import Button from "../generic/Button/Button"
 
 function Header() {
   return (
@@ -27,7 +28,7 @@ function Header() {
               </a>
             </li>
             <li className="header__links__list-item">
-              <button className="button header__button">Contact Us</button>
+              <Button/>
             </li>
           </ul>
         </nav>
