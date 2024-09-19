@@ -39,7 +39,7 @@ function Footer() {
               <a className="link footer__bottom__social__list__item-link">
                 <img
                   className="footer__bottom__social__list__item-icon"
-                  src="../../../public/img/fasebook.png"
+                  src="/img/fasebook.png"
                   alt="fasebook link"
                 />
               </a>
@@ -48,7 +48,7 @@ function Footer() {
               <a className="link footer__bottom__social__list__item-link">
                 <img
                   className="footer__bottom__social__list__item-icon"
-                  src="../../../public/img/instagram.png"
+                  src="/img/instagram.png"
                   alt="instagram link"
                 />
               </a>
@@ -57,7 +57,7 @@ function Footer() {
               <a className="link footer__bottom__social__list__item-link">
                 <img
                   className="footer__bottom__social__list__item-icon"
-                  src="../../../public/img/tiktok.png"
+                  src="/img/tiktok.png"
                   alt="tiktok link"
                 />
               </a>
@@ -66,7 +66,7 @@ function Footer() {
               <a className="link footer__bottom__social__list__item-link">
                 <img
                   className="footer__bottom__social__list__item-icon"
-                  src="../../../public/img/youtube.png"
+                  src="/img/youtube.png"
                   alt="youtube link"
                 />
               </a>
