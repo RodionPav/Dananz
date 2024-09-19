@@ -68,7 +68,7 @@ function Home() {
               <span className="about__bottom__card__text-title">
                 Arga Danaan
               </span>
-              <p>CEO of Dananz</p>
+              <span>CEO of Dananz</span>
             </p>
           </div>
         </div>
