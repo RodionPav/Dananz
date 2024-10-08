@@ -111,32 +111,15 @@
     position: relative;
     grid-area: C;
     margin-top: 20px;
+    z-index: 0;
   }
 
   &__cards {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    width: 15%;
+    z-index: 1;
     height: 100%;
-    background-color: var(--color-blue);
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      color: var(--color-white);
-      font-weight: 400;
-      padding: 10px;
-      &-header {
-        font-size: clamp(1.5rem, 0.8838rem + 2.6291vw, 3.25rem);
-      }
-      &-text {
-        font-size: clamp(0.625rem, 0.493rem + 0.5634vw, 1rem);
-      }
-    }
   }
 }
 

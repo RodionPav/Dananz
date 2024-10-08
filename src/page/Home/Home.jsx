@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Banner from "../../blocks/banner/banner";
 import "./Home.scss";
 
 function Home() {
@@ -19,20 +20,9 @@ function Home() {
             alt="bright kitchen image"
             className="img"
           />
-          <ul className="intro__cards">
-            <li className="intro__cards__item">
-              <h3 className="intro__cards__item-header">350+</h3>
-              <p className="intro__cards__item-text">Project Completed</p>
-            </li>
-            <li className="intro__cards__item">
-              <h3 className="intro__cards__item-header">23+</h3>
-              <p className="intro__cards__item-text">Professional Teams</p>
-            </li>
-            <li className="intro__cards__item">
-              <h3 className="intro__cards__item-header">15+</h3>
-              <p className="intro__cards__item-text">Years Experience</p>
-            </li>
-          </ul>
+          <div className="intro__cards">
+            <Banner />
+          </div>
         </div>
       </div>
       <div className="about">
