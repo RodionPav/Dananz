@@ -1,5 +1,5 @@
 import "./Header.scss";
-import Button from "../generic/Button/Button";
+import Button from "../../blocks/button/button";
 
 function Header() {
   return (
@@ -9,12 +9,12 @@ function Header() {
         <nav className="header__menu">
           <ul className="header__links__list">
             <li className="header__links__list-item">
-              <a href="#" className="link header__link">
+              <a href="/" className="link header__link">
                 Home
               </a>
             </li>
             <li className="header__links__list-item">
-              <a href="#" className="link header__link">
+              <a href="/about" className="link header__link">
                 About Us
               </a>
             </li>

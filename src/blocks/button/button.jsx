@@ -1,4 +1,4 @@
-import "./Button.scss"
+import "./button.scss"
 
 function Button() {
   return (

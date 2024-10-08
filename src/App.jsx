@@ -14,7 +14,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/About" element={<About />} />
             {/* <Route path="/Services" element={<Services />} />
             <Route path="/Teams" element={<Teams />} /> */}
           </Routes>

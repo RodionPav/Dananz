@@ -1,0 +1,72 @@
+.about__intro {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    margin-top: 35px;
+    max-width: 580px;
+    text-align: center;
+  }
+
+  &__image {
+    margin-top: 85px;
+  }
+}
+
+.about__achievement {
+  margin-top: 100px;
+  &__top {
+    &-topic {
+      width: min-content;
+      position: relative;
+    }
+    &-topic::after {
+      content: " ";
+      position: absolute;
+      height: 1px;
+      width: 400px;
+      left: 150px;
+      top: 10px;
+      background: #000000;
+    }
+
+    &-title {
+      max-width: 700px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 60px;
+    &-img {
+      max-width: 880px;
+    }
+  }
+}
+
+.about__service {
+  margin-top: 100px;
+  &__top {
+    &-topic {
+      position: relative;
+    }
+    &-topic::after {
+      content: " ";
+      position: absolute;
+      height: 1px;
+      width: 400px;
+      left: 150px;
+      top: 10px;
+      background: #000000;
+    }
+    &-text {
+      max-width: 500px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 100px;
+  }
+}

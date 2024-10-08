@@ -14,3 +14,9 @@
   width: calc(100vw - 240px);
   max-width: 1440px;
 }
+
+.page-title {
+  font-size: clamp(2.125rem, 1.622rem + 2.0638vw, 3.5rem);
+  font-weight: 700;
+  line-height: 78.4px;
+}
