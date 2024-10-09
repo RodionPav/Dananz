@@ -1,0 +1,14 @@
+@import "../../assets/scss/mixin.scss";
+
+.team {
+  @include main-gap();
+
+  &__disigner {
+    &__top {
+      @include line-absolut();
+    }
+    &__bottom {
+      margin-top: 60px;
+    }
+  }
+}

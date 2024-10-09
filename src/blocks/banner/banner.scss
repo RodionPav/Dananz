@@ -1,14 +1,14 @@
+@import "../../assets/scss/mixin.scss";
+
 .banner {
-  display: flex;
+  @include flex-column();
   justify-content: space-evenly;
-  flex-direction: column;
   max-width: 290px;
   height: 100%;
   background-color: var(--color-blue);
   align-items: center;
   &__item {
-    display: flex;
-    flex-direction: column;
+    @include flex-column();
     color: var(--color-white);
     font-weight: 400;
     align-items: center;

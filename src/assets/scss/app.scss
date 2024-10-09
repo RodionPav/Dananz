@@ -1,5 +1,6 @@
 @import "./normalize.scss";
 @import "../fonts/fonts.scss";
+@import "./mixin.scss";
 
 .wrapper {
   height: 100%;
@@ -10,13 +11,92 @@
 }
 
 .content {
-  margin: 40px auto;
   width: calc(100vw - 240px);
   max-width: 1440px;
+  margin: 40px auto;
 }
 
 .page-title {
-  font-size: clamp(2.125rem, 1.622rem + 2.0638vw, 3.5rem);
   font-weight: 700;
+  font-size: clamp(2.125rem, 1.622rem + 2.0638vw, 3.5rem);
   line-height: 78.4px;
+}
+
+.wrapper-img {
+  position: relative;
+  padding-top: 42.8%;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: clamp(1.375rem, 1.1549rem + 0.939vw, 2rem);
+  line-height: 54.28px;
+  text-align: left;
+  &:hover {
+    text-shadow: 1px 1px 2px rgb(198, 189, 190);
+    cursor: pointer;
+  }
+
+  &:active {
+    text-shadow: 1px 1px 2px rgb(146, 140, 141);
+  }
+}
+
+.link {
+  &:hover {
+    text-shadow: 1px 1px 2px rgb(198, 189, 190);
+    cursor: pointer;
+  }
+
+  &:active {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgb(146, 140, 141);
+  }
+}
+
+.top-content {
+  &-topic {
+    font-weight: 500;
+    font-size: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
+  }
+
+  &-title {
+    padding-top: 15px;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.2857rem + 1.0714vw, 2.25rem);
+  }
+
+  &-text {
+    color: var(--color-gray);
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.6429rem + 0.5357vw, 1.125rem);
+  }
+}
+
+.links__list {
+  flex-wrap: wrap;
+  @include flex-column();
+  &__item {
+    display: grid;
+    grid-template-columns: min-content max-content auto;
+    align-items: center;
+    &-number {
+      text-align: left;
+    }
+  }
+
+  &-img {
+    justify-self: flex-end;
+    width: 35px;
+    height: 35px;
+  }
 }

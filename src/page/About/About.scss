@@ -1,72 +1,41 @@
-.about__intro {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import "../../assets//scss/mixin.scss";
 
-  &__text {
-    margin-top: 35px;
-    max-width: 580px;
-    text-align: center;
-  }
+.about {
+  @include main-gap();
 
-  &__image {
-    margin-top: 85px;
-  }
-}
+  &__achievement {
+    &__top {
+      @include line-absolut();
 
-.about__achievement {
-  margin-top: 100px;
-  &__top {
-    &-topic {
-      width: min-content;
-      position: relative;
-    }
-    &-topic::after {
-      content: " ";
-      position: absolute;
-      height: 1px;
-      width: 400px;
-      left: 150px;
-      top: 10px;
-      background: #000000;
+      &-title {
+        max-width: 700px;
+      }
     }
 
-    &-title {
-      max-width: 700px;
+    &__bottom {
+      display: flex;
+      gap: 60px;
+      &-img {
+        max-width: 880px;
+      }
     }
   }
 
-  &__bottom {
-    display: flex;
-    gap: 60px;
-    &-img {
-      max-width: 880px;
-    }
-  }
-}
+  &__service {
+    &__top {
+      @include line-absolut();
 
-.about__service {
-  margin-top: 100px;
-  &__top {
-    &-topic {
-      position: relative;
-    }
-    &-topic::after {
-      content: " ";
-      position: absolute;
-      height: 1px;
-      width: 400px;
-      left: 150px;
-      top: 10px;
-      background: #000000;
-    }
-    &-text {
-      max-width: 500px;
-    }
-  }
+      &-topic {
+        position: relative;
+      }
 
-  &__bottom {
-    margin-top: 100px;
+      &-text {
+        max-width: 500px;
+      }
+    }
+
+    &__bottom {
+      margin-top: 100px;
+    }
   }
 }

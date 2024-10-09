@@ -1,0 +1,32 @@
+@import "../../assets/scss/mixin.scss";
+.person__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 30px;
+  column-gap: 20px;
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    min-height: 400px;
+    background: var(--color-blue);
+    background-image: url(img/staf/person.png);
+    &__content {
+      align-self: flex-end;
+      width: 90%;
+      height: 20%;
+      margin-bottom: 15px;
+      padding-top: 10px;
+      padding-left: 20px;
+      background-color: var(--color-white);
+
+      &-text {
+        margin: 10px;
+        overflow-wrap: break-word;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -19,12 +19,12 @@ function Header() {
               </a>
             </li>
             <li className="header__links__list-item">
-              <a href="#" className="link header__link">
+              <a href="/service" className="link header__link">
                 Services
               </a>
             </li>
             <li className="header__links__list-item">
-              <a href="#" className="link header__link">
+              <a href="/team" className="link header__link">
                 Our Teams
               </a>
             </li>

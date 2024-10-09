@@ -1,0 +1,16 @@
+@import "../../assets//scss/mixin.scss";
+
+.intro {
+  @include flex-column();
+  align-items: center;
+
+  &__text {
+    margin-top: 35px;
+    max-width: 580px;
+    text-align: center;
+  }
+
+  &__image {
+    margin-top: 85px;
+  }
+}

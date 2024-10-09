@@ -2,22 +2,20 @@
 
 import Banner from "../../blocks/banner/banner";
 import Cards from "../../blocks/cards/cards";
+import Intro from "../../components/intro/intro";
 import "./About.scss";
+
+const intro = {
+  title: "About",
+  text: " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  img: "/img/teamwork/about-intro.png",
+};
 
 function About() {
   return (
-    <>
+    <div className="about">
       <div className="about__intro">
-        <h1 className="about__intro__title page-title">About</h1>
-        <p className="about__intro__text">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
-        </p>
-        <img
-          src="/img/about-intro.png"
-          alt=""
-          className="about__intro__image"
-        />
+        <Intro intro={intro} />
       </div>
       <div className="about__achievement">
         <div className="top-content about__achievement__top">
@@ -60,7 +58,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
