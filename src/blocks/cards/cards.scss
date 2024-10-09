@@ -1,9 +1,9 @@
+@import "../../assets/scss/mixin.scss";
 .cards {
   display: flex;
   gap: 20px;
   &__item {
-    display: flex;
-    flex-direction: column;
+    @include flex-column();
     align-items: center;
     gap: 15px;
     &-img {

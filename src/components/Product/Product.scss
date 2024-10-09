@@ -1,0 +1,70 @@
+@import "../../assets/scss/mixin.scss";
+
+.product {
+  &__top {
+    @include line-absolut();
+    display: grid;
+    grid-template-areas:
+      "A  B"
+      "C  B";
+
+    &-topic {
+      grid-area: A;
+    }
+
+    &-title {
+      grid-area: C;
+      width: 336px;
+    }
+
+    &-text {
+      grid-area: B;
+      justify-self: end;
+      align-self: center;
+      width: 473px;
+      padding-top: 37px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 75px;
+    &__list {
+      @include flex-column();
+      gap: 50px;
+      &__item {
+        display: flex;
+        position: relative;
+        gap: 80px;
+        &-number {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 44.8px;
+          text-align: left;
+        }
+        &__content {
+          &-text {
+            padding-top: 10px;
+            max-width: 500px;
+            font-weight: 400;
+            font-size: 18px;
+          }
+          &-title {
+            font-weight: 600;
+            font-size: 32px;
+            width: fit-content;
+          }
+        }
+      }
+
+      &__item::after {
+        content: url(img/arrow-right.png);
+        position: absolute;
+        right: 0;
+        top: 25px;
+      }
+    }
+  }
+  &__menu {
+    background: var(--color-white);
+  }
+}

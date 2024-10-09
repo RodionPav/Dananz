@@ -8,7 +8,7 @@
   font-weight: 500;
   font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
   line-height: 21px;
-  background: #2c3878;
+  background: var(--color-blue);
 
   &:hover {
     text-shadow: 1px 1px 2px rgb(198, 189, 190);
