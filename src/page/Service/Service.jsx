@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Intro from "../../components/intro/intro";
-import Product from "../../components/Product/Product";
+import ProductThemes from "../../components/ProductThemes/ProductThemes";
 import "./Service.scss";
 
 function Service() {
@@ -64,7 +64,7 @@ function Service() {
         </div>
       </div>
       <div className="service__product">
-        <Product />
+        <ProductThemes />
       </div>
     </div>
   );

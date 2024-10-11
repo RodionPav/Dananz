@@ -1,0 +1,19 @@
+@import "../../assets/scss/mixin.scss";
+
+.advantages {
+  &__top {
+    @include line-absolut();
+
+    &-topic {
+      position: relative;
+    }
+
+    &-text {
+      max-width: 500px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 100px;
+  }
+}

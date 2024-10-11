@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Banner from "../../blocks/banner/banner";
-import Product from "../../components/Product/Product";
+import ProductThemes from "../../components/ProductThemes/ProductThemes";
 import "./Home.scss";
 
 function Home() {
@@ -61,7 +61,7 @@ function Home() {
               <span className="home__about__bottom__card__text-title">
                 Arga Danaan
               </span>
-              <span>CEO of Dananz</span>
+              <span> CEO of Dananz</span>
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ function Home() {
         </div>
       </div>
       <div className="home__product">
-        <Product />
+        <ProductThemes />
       </div>
 
       <div className="home__material">

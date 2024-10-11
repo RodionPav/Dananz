@@ -1,0 +1,6 @@
+@import "../../assets/scss/mixin.scss";
+
+.filters {
+  @include flex-column();
+  gap: 30px;
+}

@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import About from "./page/About/About";
 import { Routes, Route } from "react-router-dom";
 import Service from "./page/Service/Service";
-import Team from "./page/Team/Team";
+import Catalog from "./page/Catalog/Catalog";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/service" element={<Service />} />
-            <Route path="/Team" element={<Team />} />
+            <Route path="/catalog" element={<Catalog />} />
           </Routes>
         </div>
         <Footer />
