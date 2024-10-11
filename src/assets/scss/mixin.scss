@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 @mixin main-gap() {
   @include flex-column();
   gap: 130px;
@@ -18,7 +23,6 @@
   background: #000000;
 }
 
-
 @mixin line-absolut() {
   &-topic {
     width: min-content;
@@ -27,4 +31,13 @@
   &-topic::after {
     @include line-after();
   }
+}
+
+@mixin img-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

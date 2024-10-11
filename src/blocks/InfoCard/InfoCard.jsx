@@ -1,6 +1,6 @@
-import "./cards.scss";
+import "./InfoCard.scss";
 
-function Cards() {
+function InfoCard() {
   const data = [
     {
       title: "High Quality",
@@ -32,4 +32,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default InfoCard;

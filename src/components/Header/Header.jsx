@@ -5,12 +5,17 @@ function Header() {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <a className="logo"> Dananz</a>
+        <a className="logo">Dananz</a>
         <nav className="header__menu">
           <ul className="header__links__list">
             <li className="header__links__list-item">
               <a href="/" className="link header__link">
                 Home
+              </a>
+            </li>
+            <li className="header__links__list-item">
+              <a href="/catalog" className="link header__link">
+                Catalog
               </a>
             </li>
             <li className="header__links__list-item">
@@ -21,11 +26,6 @@ function Header() {
             <li className="header__links__list-item">
               <a href="/service" className="link header__link">
                 Services
-              </a>
-            </li>
-            <li className="header__links__list-item">
-              <a href="/team" className="link header__link">
-                Our Teams
               </a>
             </li>
             <li className="header__links__list-item">
