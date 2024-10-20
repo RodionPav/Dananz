@@ -1,8 +1,10 @@
-import ProductBlock from "../../blocks/ProductBlock/ProductBlock";
+import ProductBlock from "../../ui/ProductBlock/ProductBlock";
 import Advantages from "../../components/Advantages/Advantages";
 import Filtes from "../../components/Filters/Filtes";
 import InfoMenu from "../../components/InfoMenu/InfoMenu";
 import "./Catalog.scss";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 const Catalog = () => {
   const items = [
@@ -68,7 +70,18 @@ const Catalog = () => {
     },
   ];
 
-  const product = items.map((obj, index) => (
+  const [item, setItem] = React.useState([]);
+
+  React.useEffect(() => {
+    axios
+      .get("https://6715287a33bc2bfe40b99410.mockapi.io/dananz/items")
+      .then((res) => {
+        setItem(res.data);
+      });
+  }, []);
+
+  console.log(item);
+  const product = item.map((obj, index) => (
     <ProductBlock obj={obj} key={index} />
   ));
 

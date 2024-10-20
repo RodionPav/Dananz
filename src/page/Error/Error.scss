@@ -1,0 +1,11 @@
+@import "../../assets/scss/mixin.scss";
+
+.error {
+  @include flex-column();
+  &-link {
+    border: 1px solid black;
+    width: min-content;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}

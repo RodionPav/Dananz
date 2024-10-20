@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Banner from "../../blocks/banner/banner";
+import Banner from "../../ui/banner/banner";
 import ProductThemes from "../../components/ProductThemes/ProductThemes";
 import "./Home.scss";
 

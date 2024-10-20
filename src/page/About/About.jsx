@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import Banner from "../../blocks/banner/banner";
-import PersonCard from "../../blocks/PersonCard/PersonCard";
+import Banner from "../../ui/banner/banner";
+import PersonCard from "../../ui/PersonCard/PersonCard";
 import Advantages from "../../components/Advantages/Advantages";
 import Intro from "../../components/intro/intro";
 import "./About.scss";

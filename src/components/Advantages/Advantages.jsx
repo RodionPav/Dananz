@@ -1,4 +1,4 @@
-import InfoCard from "../../blocks/InfoCard/InfoCard";
+import InfoCard from "../../ui/InfoCard/InfoCard";
 import "./Advantages.scss";
 
 function Advantages() {

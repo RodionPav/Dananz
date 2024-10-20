@@ -1,5 +1,5 @@
 import "./Header.scss";
-import Button from "../../blocks/button/button";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,27 +9,16 @@ function Header() {
         <nav className="header__menu">
           <ul className="header__links__list">
             <li className="header__links__list-item">
-              <a href="/" className="link header__link">
-                Home
-              </a>
+              <Link to="/">Home</Link>
             </li>
             <li className="header__links__list-item">
-              <a href="/catalog" className="link header__link">
-                Catalog
-              </a>
+              <Link to="/catalog">Catalog</Link>
             </li>
             <li className="header__links__list-item">
-              <a href="/about" className="link header__link">
-                About Us
-              </a>
+              <Link to="/about">About Us</Link>
             </li>
             <li className="header__links__list-item">
-              <a href="/service" className="link header__link">
-                Services
-              </a>
-            </li>
-            <li className="header__links__list-item">
-              <Button />
+              <Link to="/service">Services</Link>
             </li>
           </ul>
         </nav>
