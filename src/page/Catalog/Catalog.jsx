@@ -3,86 +3,35 @@ import Advantages from "../../components/Advantages/Advantages";
 import Filtes from "../../components/Filters/Filtes";
 import InfoMenu from "../../components/InfoMenu/InfoMenu";
 import "./Catalog.scss";
-import React, { useEffect } from "react";
+import React from "react";
 import axios from "axios";
+import Skeleton from "../../ui/ProductBlock/Skeleton";
+import { useDispatch, useSelector } from "react-redux";
 
 const Catalog = () => {
-  const items = [
-    {
-      title: "Chair",
-      price: "1000$",
-      img: "img/entry-img.png",
-      inStock: true,
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      img: "img/entry-img.png",
-      inStock: false,
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      inStock: true,
-      img: "img/entry-img.png",
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      inStock: true,
-      img: "img/entry-img.png",
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      inStock: true,
-      img: "img/entry-img.png",
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      inStock: true,
-      img: "img/entry-img.png",
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      inStock: true,
-      img: "img/entry-img.png",
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      inStock: true,
-      img: "img/entry-img.png",
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      img: "img/entry-img.png",
-      inStock: true,
-    },
-    {
-      title: "Chair",
-      price: "1000$",
-      img: "img/entry-img.png",
-      inStock: true,
-    },
-  ];
+  const count = useSelector((state) => state.counter.cartItems);
+  const dispatch = useDispatch();
+  console.log(count);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const [item, setItem] = React.useState([]);
 
   React.useEffect(() => {
+    setIsLoading(true);
     axios
       .get("https://6715287a33bc2bfe40b99410.mockapi.io/dananz/items")
       .then((res) => {
         setItem(res.data);
+        setIsLoading(false);
       });
   }, []);
 
-  console.log(item);
-  const product = item.map((obj, index) => (
-    <ProductBlock obj={obj} key={index} />
+  const products = item.map((obj, index) => (
+    <ProductBlock dispatch={dispatch} obj={obj} key={index} />
+  ));
+
+  const skeletons = [...new Array(8)].map((_, index) => (
+    <Skeleton key={index} />
   ));
 
   return (
@@ -94,7 +43,9 @@ const Catalog = () => {
         <div className="catalog__main__filters">
           <Filtes />
         </div>
-        <div className="catalog__main__cards">{product}</div>
+        <div className="catalog__main__cards">
+          {isLoading == false ? products : skeletons}
+        </div>
       </div>
       <div className="catalog__advantages">
         <Advantages />

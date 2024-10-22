@@ -5,14 +5,6 @@ import ErrorPage from "./page/Error/Error.jsx";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 
-// const intros = [
-//   {
-//     title: "About",
-//     text: " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-//     img: "/img/about-intro.png",
-//   },
-// ];
-
 const router = createBrowserRouter([
   {
     path: "*",

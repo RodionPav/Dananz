@@ -1,0 +1,78 @@
+@import "../../assets/scss/mixin.scss";
+
+.cartItem {
+  gap: 30px;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  @include flex-row();
+  &__photo {
+    position: relative;
+    width: 280px;
+    min-height: 200px;
+    &-img {
+      @include img-absolute();
+    }
+  }
+  &__description {
+    max-width: 400px;
+    &-title {
+      font-size: clamp(1.5rem, 1.2733rem + 0.9302vw, 2.25rem);
+    }
+    &-text {
+      font-size: clamp(0.75rem, 0.6366rem + 0.4651vw, 1.125rem);
+    }
+  }
+  &__count {
+    gap: 25px;
+    margin-left: auto;
+    padding-right: 30px;
+    @include flex-row();
+    @include just-align-center();
+    &-text {
+      font-size: clamp(1.375rem, 1.2994rem + 0.3101vw, 1.625rem);
+    }
+    &__action {
+      align-items: center;
+      gap: 15px;
+      border: 2px solid var(--color-black);
+      border-radius: 4px;
+      padding: 20px 10px;
+      @include flex-row();
+      &-button {
+        font-size: clamp(1.375rem, 1.2616rem + 0.4651vw, 1.75rem);
+        background: none;
+        transition: all ease-in-out;
+        height: min-content;
+      }
+      &-button:hover {
+        transform: scale(1.05);
+      }
+      &-button:active {
+        transform: translateY(1px);
+      }
+      &-text {
+        cursor: default;
+        font-size: clamp(1rem, 0.8866rem + 0.4651vw, 1.375rem);
+      }
+    }
+    &__delete {
+      &-button {
+        border: none;
+        border-radius: 5px;
+        padding: 7px 13px;
+        color: var(--color-white);
+        background: #2c3e50;
+      }
+      &-button:hover {
+        background: #c0392b;
+      }
+      &-button:active {
+        background: #e74c3c;
+      }
+    }
+  }
+}
+
+.cartItem:hover {
+  background-color: var(--color-light-gray);
+}

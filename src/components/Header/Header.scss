@@ -1,12 +1,12 @@
 @import "../../assets/scss/mixin.scss";
 
 .header {
-  width: 100%;
-  z-index: 10;
-  transition: grid-template-rows 0.2s;
-  background: #f4f4f4;
   position: sticky;
   top: 0;
+  z-index: 10;
+  width: 100%;
+  background: var(--color-light-gray);
+  transition: grid-template-rows 0.2s;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -23,8 +23,8 @@
   &__links__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     width: clamp(200px, 50vi, 1000px);
   }
 }

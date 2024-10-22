@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import "./ProductBlock.scss";
+import { addItem } from "../../app/slices/CartSlice";
 
-function ProductBlock({ obj }) {
+function ProductBlock({ obj, dispatch }) {
   return (
     <div className="product">
       <div className="product__photo">
@@ -12,8 +13,13 @@ function ProductBlock({ obj }) {
         <p className="product__details-text">{obj.text}</p>
       </div>
       <div className="product__bottom">
-        <div className="product__bottom-price">{obj.price} $</div>
-        <button className="product__bottom-button">Add to Cart</button>
+        <div className="product__bottom-price">{obj.price}$</div>
+        <button
+          className="product__bottom-button"
+          onClick={() => dispatch(addItem(obj))}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );

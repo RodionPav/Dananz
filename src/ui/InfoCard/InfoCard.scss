@@ -3,17 +3,17 @@
   display: flex;
   gap: 20px;
   &__item {
-    @include flex-column();
     align-items: center;
     gap: 15px;
+    @include flex-column();
     &-img {
-      height: 65px;
       width: 65px;
+      height: 65px;
     }
     &-text {
       margin: 10px;
-      text-align: center;
       overflow-wrap: break-word;
+      text-align: center;
     }
   }
 }

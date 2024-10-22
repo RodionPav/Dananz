@@ -20,6 +20,9 @@ function Header() {
             <li className="header__links__list-item">
               <Link to="/service">Services</Link>
             </li>
+            <li className="header__links__list-item">
+              <Link to="/cart">Cart</Link>
+            </li>
           </ul>
         </nav>
       </div>

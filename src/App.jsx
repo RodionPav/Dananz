@@ -7,6 +7,7 @@ import About from "./page/About/About";
 import { Routes, Route } from "react-router-dom";
 import Service from "./page/Service/Service";
 import Catalog from "./page/Catalog/Catalog";
+import Cart from "./page/Cart/Cart";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/service" element={<Service />} />
             <Route path="/catalog" element={<Catalog />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
         <Footer />
