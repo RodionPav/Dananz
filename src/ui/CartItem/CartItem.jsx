@@ -1,8 +1,14 @@
 /* eslint-disable react/prop-types */
-import { deleteAllItems, deleteItem } from "../../app/slices/CartSlice";
+import {
+  deleteAllItems,
+  deleteItem,
+  addItem,
+} from "../../app/slices/CartSlice";
 import "./CartItem.scss";
 
 function CartItem({ dispatch, item }) {
+  const price = item.price * item.amount;
+
   return (
     <div className="cartItem">
       <div className="cartItem__photo">
@@ -17,10 +23,17 @@ function CartItem({ dispatch, item }) {
         <p className="cartItem__description-text">{item.text}</p>
       </div>
       <div className="cartItem__count">
-        <p className="cartItem__count-text">{item.price}$</p>
+        <p className="cartItem__count-text">{price}$</p>
         <div className="cartItem__count__action">
-          <button className="cartItem__count__action-button">+</button>
-          <div className="cartItem__count__action-text">1</div>
+          <button
+            className="cartItem__count__action-button"
+            onClick={() => {
+              dispatch(addItem(item));
+            }}
+          >
+            +
+          </button>
+          <div className="cartItem__count__action-text">{item.amount}</div>
           <button
             className="cartItem__count__action-button"
             onClick={() => {
@@ -34,7 +47,7 @@ function CartItem({ dispatch, item }) {
           <button
             className="cartItem__count__delete-button"
             onClick={() => {
-              dispatch(deleteAllItems());
+              dispatch(deleteAllItems(item));
             }}
           >
             DELETE

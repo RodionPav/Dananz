@@ -9,15 +9,33 @@ export const CartSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action) => {
-      state.cartItems.push(action.payload);
+      if (state.cartItems.find((obj) => obj.id === action.payload.id)) {
+        state.cartItems.forEach((obj) => {
+          obj.id === action.payload.id ? (obj.amount += 1) : obj;
+        });
+      } else {
+        state.cartItems.push(action.payload);
+        state.cartItems.forEach((obj) => {
+          obj.id === action.payload.id ? (obj.amount = 1) : obj;
+        });
+      }
     },
     deleteItem: (state, action) => {
+      if (action.payload.amount !== 1) {
+        console.log(action.payload);
+        state.cartItems.forEach((obj) => {
+          obj.id === action.payload.id ? (obj.amount -= 1) : obj;
+        });
+      } else {
+        state.cartItems = state.cartItems.filter(
+          (item) => item.id !== action.payload.id
+        );
+      }
+    },
+    deleteAllItems: (state, action) => {
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== action.payload.id
       );
-    },
-    deleteAllItems: (state) => {
-      state.cartItems = [];
     },
   },
 });
