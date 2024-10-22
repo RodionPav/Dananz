@@ -2,7 +2,7 @@
 import "./ProductBlock.scss";
 import { addItem } from "../../app/slices/CartSlice";
 
-function ProductBlock({ obj, dispatch }) {
+function ProductBlock({ obj, addItem }) {
   return (
     <div className="product">
       <div className="product__photo">
@@ -14,10 +14,7 @@ function ProductBlock({ obj, dispatch }) {
       </div>
       <div className="product__bottom">
         <div className="product__bottom-price">{obj.price}$</div>
-        <button
-          className="product__bottom-button"
-          onClick={() => dispatch(addItem(obj))}
-        >
+        <button className="product__bottom-button" onClick={() => addItem(obj)}>
           Add to Cart
         </button>
       </div>

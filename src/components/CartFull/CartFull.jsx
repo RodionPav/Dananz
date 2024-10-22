@@ -2,11 +2,16 @@
 import CartItem from "../../ui/CartItem/CartItem";
 import "./CartFull.scss";
 
-function CartFull({ dispatch, items }) {
+function CartFull({ deleteAllItems, deleteItems, items }) {
   let cartItems = [];
   if (items) {
     cartItems = items.map((item, index) => (
-      <CartItem item={item} key={index} dispatch={dispatch} />
+      <CartItem
+        item={item}
+        key={index}
+        deleteItems={deleteItems}
+        deleteAllItems={deleteAllItems}
+      />
     ));
   }
   return (

@@ -3,14 +3,16 @@ import CartFull from "../../components/CartFull/CartFull";
 import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
+import CounterCart from "../../mobx/mobxCart";
 
 function Cart() {
   // const [items, setItems] = React.useState(
   //   useSelector((state) => state.counter.cartItems)
   // );
-  const items = useSelector((state) => state.counter.cartItems);
-  const dispatch = useDispatch();
-  console.log(items);
+  // const items = useSelector((state) => state.counter.cartItems);
+  // const dispatch = useDispatch();
+  const { items, deleteItems, deleteAllItems } = CounterCart;
+
   return (
     <div className="cart">
       <div className="cart__top">
@@ -27,7 +29,11 @@ function Cart() {
           {items == false ? (
             <CartEmpty />
           ) : (
-            <CartFull dispatch={dispatch} items={items} />
+            <CartFull
+              deleteItems={deleteItems}
+              deleteAllItems={deleteAllItems}
+              items={items}
+            />
           )}
         </div>
       </div>

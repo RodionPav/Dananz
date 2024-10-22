@@ -7,10 +7,14 @@ import React from "react";
 import axios from "axios";
 import Skeleton from "../../ui/ProductBlock/Skeleton";
 import { useDispatch, useSelector } from "react-redux";
+import { observer } from "mobx-react-lite";
+import CounterCart from "../../mobx/mobxCart";
 
-const Catalog = () => {
-  const count = useSelector((state) => state.counter.cartItems);
-  const dispatch = useDispatch();
+const Catalog = observer(() => {
+  // const count = useSelector((state) => state.counter.cartItems);
+  // const dispatch = useDispatch();
+
+  const { items, deleteItems, addItem } = CounterCart;
 
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -27,7 +31,7 @@ const Catalog = () => {
   }, []);
 
   const products = item.map((obj, index) => (
-    <ProductBlock dispatch={dispatch} obj={obj} key={index} />
+    <ProductBlock addItem={addItem} obj={obj} key={index} />
   ));
 
   const skeletons = [...new Array(8)].map((_, index) => (
@@ -52,6 +56,6 @@ const Catalog = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Catalog;

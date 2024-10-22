@@ -2,7 +2,7 @@
 import { deleteAllItems, deleteItem } from "../../app/slices/CartSlice";
 import "./CartItem.scss";
 
-function CartItem({ dispatch, item }) {
+function CartItem({ deleteAllItems, deleteItems, item }) {
   return (
     <div className="cartItem">
       <div className="cartItem__photo">
@@ -24,7 +24,8 @@ function CartItem({ dispatch, item }) {
           <button
             className="cartItem__count__action-button"
             onClick={() => {
-              dispatch(deleteItem(item));
+              console.log(item)
+              deleteItems(item.id);
             }}
           >
             -
@@ -34,7 +35,7 @@ function CartItem({ dispatch, item }) {
           <button
             className="cartItem__count__delete-button"
             onClick={() => {
-              dispatch(deleteAllItems());
+              deleteAllItems(item);
             }}
           >
             DELETE
