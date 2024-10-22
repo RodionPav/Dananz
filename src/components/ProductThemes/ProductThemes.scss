@@ -2,11 +2,11 @@
 
 .productThemes {
   &__top {
-    @include line-absolut();
     display: grid;
     grid-template-areas:
       "A  B"
       "C  B";
+    @include line-absolut();
 
     &-topic {
       grid-area: A;
@@ -29,29 +29,29 @@
   &__bottom {
     margin-top: 75px;
     &__list {
-      @include flex-column();
       gap: 50px;
+      @include flex-column();
       &__item {
-        display: flex;
         position: relative;
+        display: flex;
         gap: 80px;
         &-number {
           font-weight: 600;
-          font-size: 32px;
+          font-size: clamp(1.625rem, 1.5116rem + 0.4651vw, 2rem);
           line-height: 44.8px;
           text-align: left;
         }
         &__content {
           &-text {
-            padding-top: 10px;
             max-width: 500px;
+            padding-top: 10px;
             font-weight: 400;
-            font-size: 18px;
+            font-size: clamp(0.75rem, 0.6366rem + 0.4651vw, 1.125rem);
           }
           &-title {
-            font-weight: 600;
-            font-size: 32px;
             width: fit-content;
+            font-weight: 600;
+            font-size: clamp(1.625rem, 1.5116rem + 0.4651vw, 2rem);
           }
         }
       }
@@ -59,8 +59,8 @@
       &__item::after {
         content: url(img/arrow-right.png);
         position: absolute;
-        right: 0;
         top: 25px;
+        right: 0;
       }
     }
   }

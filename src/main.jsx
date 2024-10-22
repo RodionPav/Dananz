@@ -2,14 +2,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import ErrorPage from "./page/Error/Error.jsx";
-
-// const intros = [
-//   {
-//     title: "About",
-//     text: " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-//     img: "/img/about-intro.png",
-//   },
-// ];
+import { store } from "./app/store";
+import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -20,5 +14,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );

@@ -1,12 +1,12 @@
 @import "../../assets//scss/mixin.scss";
 
 .intro {
-  @include flex-column();
   align-items: center;
+  @include flex-column();
 
   &__text {
-    margin-top: 35px;
     max-width: 580px;
+    margin-top: 35px;
     text-align: center;
   }
 

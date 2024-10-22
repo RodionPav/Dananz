@@ -8,25 +8,30 @@
   flex-direction: row;
 }
 
+@mixin just-align-center {
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin main-gap() {
-  @include flex-column();
   gap: 130px;
+  @include flex-column();
 }
 
 @mixin line-after() {
   content: " ";
   position: absolute;
-  height: 1px;
-  width: 400px;
-  left: 150px;
   top: 10px;
+  left: 150px;
+  width: 400px;
+  height: 1px;
   background: #000000;
 }
 
 @mixin line-absolut() {
   &-topic {
-    width: min-content;
     position: relative;
+    width: min-content;
   }
   &-topic::after {
     @include line-after();

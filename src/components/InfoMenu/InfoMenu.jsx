@@ -5,7 +5,7 @@ function InfoMenu() {
     <div className="infoMenu">
       <div className="infoMenu-town">Town</div>
       <div className="infoMenu-serch">serch</div>
-      <div className="infoMenu-cart">price</div>
+      <div className="infoMenu-cart">CART</div>
     </div>
   );
 }

@@ -10,16 +10,16 @@
     &__bottom {
       margin-top: 40px;
       &__list {
-        @include flex-column();
         gap: 40px;
+        @include flex-column();
         &__item {
+          position: relative;
           display: grid;
           grid-template-areas:
             "img title"
             "img text";
           justify-items: center;
           column-gap: 100px;
-          position: relative;
           &-img {
             grid-area: img;
           }

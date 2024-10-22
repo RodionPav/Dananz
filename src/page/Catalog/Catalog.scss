@@ -4,7 +4,6 @@
   position: relative;
   gap: 50px;
   @include main-gap();
-
   &__top {
   }
   &__main {
@@ -20,10 +19,9 @@
 
     &__cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      column-gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
       width: 100%;
-      outline: 1px solid gray;
     }
 
     &__cards {

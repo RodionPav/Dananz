@@ -1,0 +1,52 @@
+@import "../../assets/scss/mixin.scss";
+
+.cart {
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+    &-title {
+      font-size: 3rem;
+    }
+  }
+  &__header {
+    max-width: 100%;
+    background: var(--color-light-gray);
+
+    &__text {
+      position: relative;
+      z-index: 20;
+      gap: 10px;
+      width: fit-content;
+      padding: 14px 45px;
+      font-size: 1.25rem;
+      @include flex-row();
+      &-p {
+        z-index: 20;
+      }
+      &-span {
+        z-index: 20;
+        border-radius: 15px;
+        padding: 0 9px;
+        background: var(--color-black);
+      }
+    }
+    &__text::after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      height: 60px;
+      background: url(img/utils/basket-tab-bg.png) no-repeat center center;
+      background-size: contain;
+    }
+  }
+  &__content {
+    @include flex-column();
+    &__main {
+      margin-top: 30px;
+    }
+  }
+}
