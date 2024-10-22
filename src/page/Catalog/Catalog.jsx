@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Catalog = () => {
   const count = useSelector((state) => state.counter.cartItems);
   const dispatch = useDispatch();
-  console.log(count);
+
   const [isLoading, setIsLoading] = React.useState(true);
 
   const [item, setItem] = React.useState([]);

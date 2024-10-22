@@ -1,10 +1,16 @@
 import CartEmpty from "../../ui/CartEmpty/CartEmpty";
 import CartFull from "../../components/CartFull/CartFull";
 import "./Cart.scss";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 
 function Cart() {
-  let f = false;
+  // const [items, setItems] = React.useState(
+  //   useSelector((state) => state.counter.cartItems)
+  // );
+  const items = useSelector((state) => state.counter.cartItems);
+  const dispatch = useDispatch();
+  console.log(items);
   return (
     <div className="cart">
       <div className="cart__top">
@@ -18,7 +24,11 @@ function Cart() {
       </div>
       <div className="cart__content">
         <div className="cart__content__main">
-          {f == true ? <CartEmpty /> : <CartFull />}
+          {items == false ? (
+            <CartEmpty />
+          ) : (
+            <CartFull dispatch={dispatch} items={items} />
+          )}
         </div>
       </div>
     </div>
