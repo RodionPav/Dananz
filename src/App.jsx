@@ -8,8 +8,16 @@ import { Routes, Route } from "react-router-dom";
 import Service from "./page/Service/Service";
 import Catalog from "./page/Catalog/Catalog";
 import Cart from "./page/Cart/Cart";
+import { useDispatch } from "react-redux";
+import { axiosCatalog } from "./app/slices/CatalogSlice";
+import React from "react";
 
 function App() {
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(axiosCatalog());
+  }, []);
   return (
     <>
       <div className="wrapper">

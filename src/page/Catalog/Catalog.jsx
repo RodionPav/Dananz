@@ -1,33 +1,30 @@
+import "./Catalog.scss";
+import { useDispatch, useSelector } from "react-redux";
+
 import ProductBlock from "../../ui/ProductBlock/ProductBlock";
 import Advantages from "../../components/Advantages/Advantages";
 import Filtes from "../../components/Filters/Filtes";
-import InfoMenu from "../../components/InfoMenu/InfoMenu";
-import "./Catalog.scss";
-import React from "react";
-import axios from "axios";
 import Skeleton from "../../ui/ProductBlock/Skeleton";
-import { useDispatch, useSelector } from "react-redux";
+import { axiosCatalog } from "../../app/slices/CatalogSlice";
+import ErrorCatalog from "../../components/ErrorCatalog/ErrorCatalog";
+import { addItem } from "../../app/slices/CartSlice";
+import { useCatalogItem } from "../../lib/addCatalogItem";
 
 const Catalog = () => {
-  const count = useSelector((state) => state.counter.cartItems);
+  const catalog = useSelector((state) => state.catalog);
   const dispatch = useDispatch();
 
-  const [isLoading, setIsLoading] = React.useState(true);
+  const addCatalogItem = (obj) => {
+    dispatch(addItem(obj));
+  };
 
-  const [item, setItem] = React.useState([]);
 
-  React.useEffect(() => {
-    setIsLoading(true);
-    axios
-      .get("https://6715287a33bc2bfe40b99410.mockapi.io/dananz/items")
-      .then((res) => {
-        setItem(res.data);
-        setIsLoading(false);
-      });
-  }, []);
+  const axiosData = () => {
+    dispatch(axiosCatalog());
+  };
 
-  const products = item.map((obj, index) => (
-    <ProductBlock dispatch={dispatch} obj={obj} key={index} />
+  const products = catalog.catalogItems.map((obj, index) => (
+    <ProductBlock addCatalogItem={addCatalogItem} obj={obj} key={index} />
   ));
 
   const skeletons = [...new Array(8)].map((_, index) => (
@@ -36,15 +33,26 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      <div className="catalog__top">
-        <InfoMenu />
-      </div>
       <div className="catalog__main">
         <div className="catalog__main__filters">
           <Filtes />
         </div>
-        <div className="catalog__main__cards">
-          {isLoading == false ? products : skeletons}
+        <div className="catalog__main__content">
+          {catalog.error == false ? (
+            <>
+              <div className="catalog__main__content__search">
+                <input
+                  type="text"
+                  className="catalog__main__content__search-input"
+                />
+              </div>
+              <div className="catalog__main__content__products">
+                {catalog.loading == false ? products : skeletons}
+              </div>
+            </>
+          ) : (
+            <ErrorCatalog axiosData={axiosData} />
+          )}
         </div>
       </div>
       <div className="catalog__advantages">

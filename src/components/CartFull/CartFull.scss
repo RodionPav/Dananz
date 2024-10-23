@@ -1,9 +1,15 @@
 @import "../../assets/scss/mixin.scss";
 
 .cartFull {
+  @include flex-column();
   min-height: 480px;
   &__items {
     @include flex-column();
     gap: 50px;
+  }
+  &__submit {
+    align-self: flex-end;
+    margin-right: 30px;
+    margin-top: 30px;
   }
 }

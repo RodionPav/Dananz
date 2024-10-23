@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./ProductBlock.scss";
-import { addItem } from "../../app/slices/CartSlice";
 
-function ProductBlock({ obj, dispatch }) {
+function ProductBlock({ obj, addCatalogItem }) {
   return (
     <div className="product">
       <div className="product__photo">
@@ -16,7 +15,7 @@ function ProductBlock({ obj, dispatch }) {
         <div className="product__bottom-price">{obj.price}$</div>
         <button
           className="product__bottom-button"
-          onClick={() => dispatch(addItem(obj))}
+          onClick={() => addCatalogItem(obj)}
         >
           Add to Cart
         </button>

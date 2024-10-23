@@ -1,16 +1,13 @@
-import CartEmpty from "../../ui/CartEmpty/CartEmpty";
-import CartFull from "../../components/CartFull/CartFull";
 import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
-import React from "react";
+
+import CartEmpty from "../../ui/CartEmpty/CartEmpty";
+import CartFull from "../../components/CartFull/CartFull";
 
 function Cart() {
-  // const [items, setItems] = React.useState(
-  //   useSelector((state) => state.counter.cartItems)
-  // );
-  const items = useSelector((state) => state.counter.cartItems);
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(items);
+
   return (
     <div className="cart">
       <div className="cart__top">
@@ -19,15 +16,17 @@ function Cart() {
       <div className="cart__header">
         <div className="cart__header__text">
           <p className="cart__header__text-p">current order</p>
-          <span className="cart__header__text-span">{0}</span>
+          <span className="cart__header__text-span">
+            {cart.cartItems == false ? 0 : cart.amount}
+          </span>
         </div>
       </div>
       <div className="cart__content">
         <div className="cart__content__main">
-          {items == false ? (
+          {cart.cartItems == false ? (
             <CartEmpty />
           ) : (
-            <CartFull dispatch={dispatch} items={items} />
+            <CartFull dispatch={dispatch} cartItems={cart.cartItems} />
           )}
         </div>
       </div>

@@ -1,15 +1,14 @@
 @import "../../assets/scss/mixin.scss";
 
 .catalog {
+  @include flex-column();
   position: relative;
   gap: 50px;
-  @include main-gap();
-  &__top {
-  }
+  margin-top: 80px;
   &__main {
     gap: 100px;
     width: 100%;
-    margin-top: 60px;
+    min-height: 800px;
     @include flex-row();
 
     &__filters {
@@ -17,17 +16,31 @@
       outline: 1px solid gray;
     }
 
-    &__cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
+    &__content {
+      @include flex-column();
       width: 100%;
-    }
+      &__search {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 100%;
+        background: var(--color-light-gray);
+        &-input {
+          height: 90%;
+          align-self: center;
+        }
+      }
 
-    &__cards {
+      &__products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        width: 100%;
+      }
     }
   }
   &__advantages {
-    margin-top: 200px; //delet !!!
+    margin-top: 100px;
   }
 }
