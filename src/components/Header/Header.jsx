@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 
 function Header() {
+  const cart = useSelector((state) => state.cart);
   return (
     <header className="header">
       <div className="header__wrapper">
@@ -20,8 +22,11 @@ function Header() {
             <li className="header__links__list-item">
               <Link to="/service">Services</Link>
             </li>
-            <li className="header__links__list-item">
+            <li className="header__links__list-item header__links__list-amount">
               <Link to="/cart">Cart</Link>
+              <div className="header__links__list-amount-text">
+                {cart.cartItems == false ? 0 : cart.amount}
+              </div>
             </li>
           </ul>
         </nav>

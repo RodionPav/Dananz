@@ -1,9 +1,5 @@
 /* eslint-disable react/prop-types */
-import {
-  deleteAllItems,
-  deleteItem,
-  addItem,
-} from "../../app/slices/CartSlice";
+import { deleteAllItem, deleteItem, addItem } from "../../app/slices/CartSlice";
 import "./CartItem.scss";
 
 function CartItem({ dispatch, item }) {
@@ -47,7 +43,7 @@ function CartItem({ dispatch, item }) {
           <button
             className="cartItem__count__delete-button"
             onClick={() => {
-              dispatch(deleteAllItems(item));
+              dispatch(deleteAllItem(item));
             }}
           >
             DELETE

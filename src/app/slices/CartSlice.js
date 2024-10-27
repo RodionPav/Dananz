@@ -13,8 +13,6 @@ export const CartSlice = createSlice({
       if (state.cartItems.find((obj) => obj.id === action.payload.id)) {
         state.cartItems.forEach((obj) => {
           obj.id === action.payload.id ? (obj.amount++, state.amount++) : obj;
-
-          console.log(state.amount);
         });
       } else {
         const cloneAction = structuredClone(action.payload);
@@ -23,7 +21,6 @@ export const CartSlice = createSlice({
           obj.id === cloneAction.id ? (obj.amount = 1) : obj;
         });
         state.amount++;
-        console.log(state.amount);
       }
     },
     deleteItem: (state, action) => {
@@ -38,16 +35,15 @@ export const CartSlice = createSlice({
         state.amount--;
       }
     },
-    deleteAllItems: (state, action) => {
+    deleteAllItem: (state, action) => {
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== action.payload.id
       );
       state.amount -= action.payload.amount;
-      console.log(state.amount);
     },
   },
 });
 
-export const { addItem, deleteItem, deleteAllItems } = CartSlice.actions;
+export const { addItem, deleteItem, deleteAllItem } = CartSlice.actions;
 
 export default CartSlice.reducer;

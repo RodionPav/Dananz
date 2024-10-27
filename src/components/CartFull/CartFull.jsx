@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import CartItem from "../../ui/CartItem/CartItem";
+import ButtonWrrapper from "../../ui/button/button";
+import CartItem from "../CartItem/CartItem";
 import "./CartFull.scss";
 
 function CartFull({ dispatch, cartItems }) {
@@ -11,7 +12,7 @@ function CartFull({ dispatch, cartItems }) {
         ))}
       </div>
       <div className="cartFull__submit">
-        <button className="cartFull__submit-text button">BUY</button>
+        <ButtonWrrapper text={"BUY"} />
       </div>
     </div>
   );

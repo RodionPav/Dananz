@@ -27,7 +27,7 @@
     margin-left: auto;
     margin-right: 30px;
     @include flex-row();
-    @include just-align-center();
+    @include flex-center();
     &-text {
       font-size: clamp(1.375rem, 1.2994rem + 0.3101vw, 1.625rem);
     }

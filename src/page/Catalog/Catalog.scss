@@ -1,10 +1,10 @@
 @import "../../assets/scss/mixin.scss";
 
 .catalog {
-  @include flex-column();
   position: relative;
   gap: 50px;
   margin-top: 80px;
+  @include flex-column();
   &__main {
     gap: 100px;
     width: 100%;
@@ -17,18 +17,17 @@
     }
 
     &__content {
-      @include flex-column();
       width: 100%;
+      @include flex-column();
       &__search {
         display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-        height: 30px;
+        @include flex-center();
         width: 100%;
-        background: var(--color-light-gray);
+        height: 30px;
+        margin-bottom: 30px;
         &-input {
-          height: 90%;
           align-self: center;
+          height: 90%;
         }
       }
 

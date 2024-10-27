@@ -25,11 +25,7 @@
         z-index: 20;
       }
       &-span {
-        z-index: 20;
-        border-radius: 15px;
-        padding: 0 9px;
-        color: var(--color-white);
-        background: var(--color-black);
+        @include amount();
       }
     }
     &__text::after {

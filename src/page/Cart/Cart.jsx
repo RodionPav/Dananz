@@ -1,7 +1,7 @@
 import "./Cart.scss";
 import { useDispatch, useSelector } from "react-redux";
 
-import CartEmpty from "../../ui/CartEmpty/CartEmpty";
+import CartEmpty from "../../components/CartEmpty/CartEmpty";
 import CartFull from "../../components/CartFull/CartFull";
 
 function Cart() {

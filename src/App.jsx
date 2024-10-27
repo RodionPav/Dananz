@@ -1,16 +1,16 @@
-import Home from "./page/Home/Home";
 import "./assets/scss/app.scss";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-
-import About from "./page/About/About";
 import { Routes, Route } from "react-router-dom";
-import Service from "./page/Service/Service";
-import Catalog from "./page/Catalog/Catalog";
-import Cart from "./page/Cart/Cart";
 import { useDispatch } from "react-redux";
 import { axiosCatalog } from "./app/slices/CatalogSlice";
 import React from "react";
+
+import Home from "./page/Home/Home";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import About from "./page/About/About";
+import Service from "./page/Service/Service";
+import Catalog from "./page/Catalog/Catalog";
+import Cart from "./page/Cart/Cart";
 
 function App() {
   const dispatch = useDispatch();

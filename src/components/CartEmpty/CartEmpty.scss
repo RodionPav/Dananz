@@ -4,7 +4,7 @@
   display: flex;
   min-height: 480px;
   background-color: var(--color-light-gray);
-  @include just-align-center();
+  @include flex-center();
   &__content {
     @include flex-column();
     gap: 30px;
@@ -17,7 +17,7 @@
       align-self: center;
       height: 48px;
       padding: 0 18px;
-      @include just-align-center();
+      @include flex-center();
       &-text {
         font-size: clamp(1rem, 0.8866rem + 0.4651vw, 1.375rem);
       }

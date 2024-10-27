@@ -38,6 +38,6 @@ export const CatalogSlice = createSlice({
   },
 });
 
-export const { addItem, deleteItem, deleteAllItems } = CatalogSlice.actions;
+export const { addItem, deleteItem, deleteAllItem } = CatalogSlice.actions;
 
 export default CatalogSlice.reducer;

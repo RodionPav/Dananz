@@ -26,5 +26,12 @@
     justify-content: space-around;
     align-items: center;
     width: clamp(200px, 50vi, 1000px);
+    &-amount {
+      @include flex-row();
+      gap: 10px;
+      &-text {
+        @include amount();
+      }
+    }
   }
 }
